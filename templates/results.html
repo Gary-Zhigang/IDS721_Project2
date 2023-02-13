@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results for "{{ query }}"</title>
+</head>
+<body>
+    <h1>Results for "{{ query }}"</h1>
+    <h2>Track: {{ track_name }} by {{ artist_name }}</h2>
+    <ul>
+        {% for track in results %}
+        <li>{{ track.name }} by {{ track.artists[0].name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
