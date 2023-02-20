@@ -1,6 +1,6 @@
 # IDS721_Project2
 ## Introduction
-This is the second project for the course IDS721, it is a flask application which can search for 10 similar songs on Spotify based on the song name you provide. In the future, I will apply more techniques in this project to make it more powerful.
+This is the second project for the course IDS721, it is a flask application which can search for 10 similar songs on Spotify based on the song name you provide. I used the Docker image to deploy this application and created a repository in DockerHub so that everyone could run it easily without cloning the whole project.
 
 ## Function Display
 ___Search Page:___   
