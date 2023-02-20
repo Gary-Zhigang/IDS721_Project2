@@ -30,4 +30,4 @@ def search():
     return render_template('results.html', query=query, track_name=track_name, artist_name=artist_name, results=results['tracks'])
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80)
+    app.run(port=8080, debug=True)
