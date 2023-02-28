@@ -32,6 +32,6 @@ kubectl delete service get-songs
 kubectl delete deployment get-songs
 minikube stop
 ````
-**Example:**
-<img src="https://github.com/Gary-Zhigang/IDS721_Project2/blob/main/images/minikube_image.png" alt="Your image description" width="600" height="700"> 
+**Example:**  
+<img src="https://github.com/Gary-Zhigang/IDS721_Project2/blob/main/images/minikube_image.png" alt="Your image description" width="850" height="750"> 
 
