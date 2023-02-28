@@ -1,6 +1,6 @@
 # IDS721_Project2
 ## Introduction
-This is the second project for the course IDS721, it is a flask application which can search for 10 similar songs on Spotify based on the song name you provide. I used the Docker image to deploy this application and created a repository in DockerHub so that everyone could run it easily without cloning the whole project.
+This is the second project for the course IDS721, it is a flask application which can search for 10 similar songs on Spotify based on the song name you provide. I used the Docker image to deploy this application and created a repository in DockerHub so that everyone could run it easily without cloning the whole project. Also, I depolyed this app on the Kubernetes by implementing Minikube.
 
 ## Function Display
 ___Search Page:___   
@@ -19,12 +19,19 @@ ___Docker:___
 
 ___Kubernetes:___  
 
-would finish in next week
+1. Start the minikube: `minikube start`
+2. Create a deployment: `kubectl create deployment get-songs --image=registry.hub.docker.com/zhiw803/get-songs`
+3. View deployment: `kubectl get deployments`
+4. Create service and expose it: `kubectl expose deployment get-songs --type=LoadBalancer --port=8080`
+5. View services:  `kubectl get service get-songs`
+6. View URL: `minikube service get-songs --url`
+7. Curl web service: i.e. `curl http://192.168.49.2:31174`
+8. Cleanup and stop: 
+```bash
+kubectl delete service get-songs
+kubectl delete deployment get-songs
+minikube stop
+````
+**Example:**
+<img src="https://github.com/Gary-Zhigang/IDS721_Project2/blob/main/images/minikube_image.png" alt="Your image description" width="600" height="700"> 
 
-
-## Project2 Requirements
-
-* Create a customized Docker container from the current version of Python that deploys a simple python script.
-* Push image to DockerHub, or Cloud based Container Registery (ECR)
-* Project should deploy automatically to Kubernetes cluster
-* Deployment should be to some form of Kubernetes service (can be hosted like Google Cloud Run or Amazon EKS, etc)
